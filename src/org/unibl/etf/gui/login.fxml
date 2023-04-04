@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="350.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="org.unibl.etf.gui.LoginController">
+   <right>
+      <AnchorPane prefHeight="470.0" prefWidth="350.0" style="-fx-background-color: F2D492;" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="usernameTextField" alignment="CENTER" layoutX="25.0" layoutY="218.0" prefHeight="25.0" prefWidth="300.0" promptText="Korisničko ime">
+               <effect>
+                  <DropShadow />
+               </effect></TextField>
+            <ImageView fx:id="lockImageView" fitHeight="150.0" fitWidth="195.0" layoutX="100.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../img/login-logo.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect></ImageView>
+            <PasswordField fx:id="enterPasswordField" alignment="CENTER" layoutX="25.0" layoutY="263.0" prefHeight="25.0" prefWidth="300.0" promptText="Lozinka">
+               <effect>
+                  <DropShadow />
+               </effect></PasswordField>
+            <Button fx:id="loginButton" defaultButton="true" layoutX="25.0" layoutY="320.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: #202C39;" text="PRIJAVITE SE" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="cancelButton" cancelButton="true" layoutX="25.0" layoutY="396.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: #202C39;" text="KRAJ RADA" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

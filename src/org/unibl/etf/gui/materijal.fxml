@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane onMouseClicked="#backgroundClickedOnAction" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #F2D492;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="org.unibl.etf.gui.MaterijalController">
+   <children>
+      <AnchorPane prefHeight="100.0" prefWidth="800.0" style="-fx-background-color: #202C39;">
+         <children>
+            <ImageView fx:id="materijalImageView" fitHeight="98.0" fitWidth="139.0" layoutX="45.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../img/furnitureModel.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="148.0" layoutY="32.0" prefHeight="42.0" prefWidth="206.0" text="MATERIJAL" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="605.0" layoutY="10.0" text="Prijavljeni ste kao:" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="usernameLabel" alignment="CENTER" graphicTextGap="6.0" layoutX="559.0" layoutY="63.0" prefHeight="33.0" prefWidth="239.0" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="imeTrgovcaLabel" alignment="CENTER" layoutX="561.0" layoutY="35.0" prefHeight="33.0" prefWidth="239.0" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="backButton" layoutX="106.0" layoutY="528.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="53.0" prefWidth="639.0" style="-fx-background-color: #283845;" text="NAZAD" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fx:id="backImageView" fitHeight="60.0" fitWidth="60.0" layoutX="41.0" layoutY="523.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/previous.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="materijalTableView" layoutX="41.0" layoutY="149.0" onMouseClicked="#mouseClickedOnAction" prefHeight="366.0" prefWidth="704.0">
+        <columns>
+          <TableColumn fx:id="idMaterijalaColumn" prefWidth="133.0" resizable="false" text="Id" />
+            <TableColumn fx:id="tipMaterijalaColumn" prefWidth="294.0" resizable="false" text="Tip materijala" />
+            <TableColumn fx:id="nazivMaterijalaColumn" minWidth="0.0" prefWidth="276.0" resizable="false" text="Naziv materijala" />
+        </columns>
+      </TableView>
+      <Button fx:id="prikaziSveButton" layoutX="386.0" layoutY="107.0" mnemonicParsing="false" onAction="#prikaziSveButtonOnAction" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: #283845;" text="PRIKAŽI SVE" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="dodajButton" layoutX="41.0" layoutY="107.0" mnemonicParsing="false" onAction="#dodajButtonOnAction" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: #283845;" text="DODAJ" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="obrisiButton" layoutX="155.0" layoutY="107.0" mnemonicParsing="false" onAction="#obrisiButtonOnAction" prefHeight="35.0" prefWidth="111.0" style="-fx-background-color: #283845;" text="OBRIŠI" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="izmijeniButton" layoutX="274.0" layoutY="107.0" mnemonicParsing="false" onAction="#izmijeniButtonOnAction" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: #283845;" text="IZMIJENI" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="pretragaPoNazivuMaterijalaTextField" layoutX="529.0" layoutY="107.0" onAction="#pretragaPoNazivuMaterijalaOnAction" prefHeight="35.0" prefWidth="216.0" promptText="Pretraga po nazivu materijala" />
+   </children>
+</AnchorPane>

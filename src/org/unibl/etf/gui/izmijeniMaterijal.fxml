@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #F2D492;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="org.unibl.etf.gui.IzmijeniMaterijalController">
+   <children>
+      <Button fx:id="prihvatiButton" layoutX="25.0" layoutY="135.0" mnemonicParsing="false" onAction="#prihvatiButtonOnAction" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #283845;" text="PRIHVATI" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <VBox layoutX="148.0" layoutY="15.0" prefHeight="104.0" prefWidth="140.0" spacing="11.0">
+         <children>
+            <TextField fx:id="idMaterijalaTextField" alignment="CENTER" promptText="Id Materijala" />
+            <TextField fx:id="nazivMaterijalaTextField" alignment="CENTER" promptText="Naziv Materijala" />
+            <TextField fx:id="tipMaterijalaTextField" alignment="CENTER" promptText="Tip materijala" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="8.0" layoutY="7.0" prefHeight="112.0" prefWidth="134.0" spacing="19.0">
+         <children>
+            <Label text="Id Materijala" />
+            <Label text="Naziv Materijala" />
+            <Label text="Tip Materijala" />
+         </children>
+      </VBox>
+      <Button fx:id="otkaziButton" layoutX="174.0" layoutY="135.0" mnemonicParsing="false" onAction="#otkaziButtonOnAction" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #283845;" text="OTKAŽI" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>
